@@ -1,0 +1,235 @@
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #f0f8ff, #d0e7ff); /* Gradient background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #007BFF; /* Primary accent color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for better contrast */
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cityInput {
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+#cityInput:focus {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 25px;
+    background-color: #007BFF; /* Primary button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+#weatherContainer {
+    width: 300px;
+    background: linear-gradient(to right, #007BFF, #00C6FF); /* Blue gradient background */
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: relative;
+}
+
+#weatherContainer h2 {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+    display: inline-block;
+}
+
+.weather-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.weather-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.temperature {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+.description {
+    font-size: 18px;
+    color: #F1F1F1;
+    margin-top: 5px;
+}
+
+.extra-info {
+    font-size: 16px;
+    color: #CCCCCC;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.weather-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Navbar styling */
+.navbar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: #111;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Seasonal backgrounds for the navbar */
+.season-winter .navbar {
+    background-image: url('https://loveincorporated.blob.core.windows.net/contentimages/gallery/6a985aaa-8a95-4382-97a9-91cdf96f43d3-Moraine_Lake_Dennis_Frates_Alamy_Stock_Photo.jpg');
+}
+
+.season-spring .navbar {
+    background-image: url('https://guideposts.org/wp-content/uploads/2018/04/cherry_blossoms.jpg.optimal.jpg');
+}
+
+.season-summer .navbar {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsaa8AeHepl4kkuEU0K1MZ1pakZwcds8SPhQ&s');
+}
+
+.season-fall .navbar {
+    background-image: url('https://png.pngtree.com/background/20230614/original/pngtree-fall-wallpaper-autumn-autumn-wallpaper-picture-image_3498556.jpg');
+}
+
+/* Navbar links */
+.navbar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+    color: #f1f1f1;
+    transform: translateX(10px); /* Slide right on hover */
+}
+
+/* Close button */
+.navbar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Open button */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.openbtn:hover {
+    background-color: #444;
+    transform: rotate(90deg); /* Rotate on hover */
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    #cityInput {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    button[type="submit"] {
+        font-size: 1em;
+    }
+
+    #weatherContainer {
+        font-size: 1.2em;
+    }
+}

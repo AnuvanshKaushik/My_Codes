@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+}
+.card{
+    padding: 23px 12px;
+    /* border: 2px red solid; */
+    margin: 23px 12px;
+    background-color: aqua;
+}
+
+#card-1{
+    box-shadow: -10px -13px black;
+    box-shadow: 10px 13px black;
+    box-shadow: 15px 20px 10px 5px black;    /*x y blur size*/
+}
+
+#card-2{
+    box-shadow: inset -13px -13px rgba(0, 0, 0, 0.594);
+}
+
+#card-3{
+    box-shadow: -10px -13px black, 10px 13px red;
+}
+
+.card h2{
+    text-shadow: 3px 3px 2px   white;
+}

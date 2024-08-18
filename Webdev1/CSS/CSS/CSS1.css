@@ -1,0 +1,23 @@
+/* EXTERNAL CSS */
+
+/* element selector */
+p{
+    color: blue;
+    background-color: orange /*!important*/;
+}
+
+/* id selector */
+#redcolor{
+    color: red;
+
+}
+
+/* class selector */
+.redbg{
+    background-color: yellowgreen;
+}
+
+/* Grouping selector */
+footer,span{
+    color: red;
+}

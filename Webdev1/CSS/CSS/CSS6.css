@@ -1,0 +1,43 @@
+
+
+.navigator{
+    background-color: black;
+    margin: 10px 10px;
+    padding: 10px 5px;
+}
+
+nav{
+    overflow: auto;
+    border-radius: 10px;
+}
+.navigator li{
+    float: left;
+    list-style: none;
+    padding: 8px 8px;
+    margin: 1px 1px;    
+}
+
+.navigator li a{
+    padding: 3px 3px;
+    margin: 10px 10px;
+    color: white;
+    text-decoration:none;
+}
+.navigator li p{
+    padding: 3px 3px;
+    /* margin: 10px 10px; */
+    color: white;
+    text-decoration:none;
+    margin: 50% 50%;
+}
+.search input{
+    float: right;
+    border-radius: 9px;
+    margin: 10px;
+}
+
+.navigator span{
+    color: aliceblue;
+    font-size: 30px;
+ 
+}

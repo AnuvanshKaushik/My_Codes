@@ -1,0 +1,36 @@
+.container{
+    background-color: aqua;
+    border: 2px solid black;
+    height: 3000px;
+}
+
+.box{
+    display: inline-block;
+    border: 2px solid red;
+    width: 150px;
+    height: 150px;
+    margin: 2px;
+}
+
+#box3{
+    /* Relative to its normal position and will leave a gap*/
+    position: relative;
+    top: 34px;
+    left: 34px;
+}
+#box2{
+    /* Relative to its parent position */
+    position: absolute;
+    top: 34px;
+    left: 34px;
+
+}
+#box4{
+    position: fixed;
+    right: 0px;
+    top: 10px;
+}
+#box5{
+    position: sticky;
+    top: 10px;
+}

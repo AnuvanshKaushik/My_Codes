@@ -1,0 +1,44 @@
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.container{
+    background-color: aqua;
+    width: 900px;
+    border: 3px solid blue;
+    padding: 10px 10px;
+    margin: 100px auto;
+}
+.item{
+    border: 3px solid red;
+    margin: 12px 3px;
+    padding: 5px 10px;
+    background-color: rgb(182, 204, 17);
+    box-sizing: border-box;
+}
+#cars{
+    clear: both;
+    width: 100%; 
+}
+#fruits{
+    float: left;
+    width: 48%;
+}
+#computer{
+    float: right;
+    width: 48%;
+}
+#stationary{
+    clear: both;
+    width: 100%; 
+}
+p{
+    text-align: justify;
+}
+.heading{
+    text-align: center;
+    margin: auto;
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pokémon Battle</title>
+    <link rel="stylesheet" href="/Webdev1/Projects/Weather.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Simple Pokémon Battle</h1>
+        <div id="battle-area">
+            <div id="player-pokemon">
+                <h2>Pikachu</h2>
+                <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif" alt="Pikachu">
+                <div class="health-bar">
+                    <div class="health" id="player-health"></div>
+                </div>
+            </div>
+            <div id="opponent-pokemon">
+                <h2>Charmander</h2>
+                <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" alt="Charmander">
+                <div class="health-bar">
+                    <div class="health" id="opponent-health"></div>
+                </div>
+            </div>
+        </div>
+        <div id="move-selection">
+            <button class="move-button" onclick="playerAttack('Thunder Shock')">Thunder Shock</button>
+            <button class="move-button" onclick="playerAttack('Quick Attack')">Quick Attack</button>
+        </div>
+        <div id="message-box"></div>
+    </div>
+
+    <script src="/Webdev1/Projects/Pokemon Game/PG.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+html{
+     font-size: 25px;  /* root element */
+}
+
+
+.container{
+    width: 100vw;    /*View port - complete width*/
+    height: 100vh;   /*View port - complete heigt*/
+    font-size: 5px;
+    border: 2px solid red;
+}
+
+
+h1{
+    text-align: center;
+}
+
+#first{
+     font-size: 3em;  /* 3em = 3 times the size of parent element */
+     /* padding: 2em;    2 times the font size of child element */
+}
+
+#second{
+    font-size: 2rem;   /*5em = 3 times the size of root element*/
+    /* padding: 3rem;     3 times the font size of root element */
+}

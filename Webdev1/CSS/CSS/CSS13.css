@@ -1,0 +1,20 @@
+h1{
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+/* If p is contained by any li which is contained by any div */
+div li p{
+    color: white;
+    background-color: green;
+    font-weight: bold;
+}
+/* if p is right inside div */
+div > p{
+    background-color: red;
+}
+/* if p is right after div */
+div + p{
+    background-color: blue;
+}

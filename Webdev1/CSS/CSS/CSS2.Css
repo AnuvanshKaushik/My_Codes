@@ -1,0 +1,31 @@
+.prajul2{
+    background-color: aqua;
+    border: blueviolet 10px solid;
+    padding: 10px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 900px;
+    margin: 100px auto;
+}
+.item{
+    background-color: blue;
+    border: black 2px solid;
+    padding: 10px 10px;
+    margin: 5px;
+}
+#loda{
+    text-align: center;
+}
+#chut{
+
+}
+#tatte{
+width: 46%;
+float: left;
+}
+#jhaat{
+width: 46%;
+float: right;
+}
+#boobs{
+clear: both;
+}

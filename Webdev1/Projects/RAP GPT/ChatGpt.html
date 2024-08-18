@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAP GPT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ChatGpt.css') }}">
+    <script src="{{ url_for('static', filename='ChatGpt.js') }}"></script>
+</head>
+
+<body>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrihkifH6zOuQ9eBjdApY9lYCmY13nn8S2Mw&s" alt="RAP GPT Logo">
+                <h1>RAP GPT</h1>
+            </div>
+        </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Your AI Assistant</h1>
+            <p>Ask me anything and I will provide answers!</p>
+        </div>
+    </header>
+    <input type="checkbox" class="btn0" id="Lo">
+    <label for="Lo" class="btn0">
+       <div class="w1"></div>
+       <div class="w2"></div>
+       <div class="w3"></div>
+    </label>
+    <aside class="PrajuLodu">
+        <h2>Popular Topics</h2>
+        <ul type="none">
+            <li><a href="#">AI</a></li>
+            <li><a href="#">Machine Learning</a></li>
+            <li><a href="#">Artificial Intelligence</a></li>
+            <li><a href="#">Ethics</a></li>
+            <li><a href="#">Data Science</a></li>
+        </ul>
+        
+        <h2>About RAP GPT</h2>
+        <p>RAP GPT is an AI assistant designed to help users with various questions related to technology, programming, and AI.</p>
+        <p>RAP GPT is developed by a team of experts in the field, and its goal is to provide accurate, helpful, and engaging responses.</p>
+        <p>Feel free to ask any questions you have about technology, programming, or AI!</p>
+        <h2>RAP</h2>
+    </aside>
+
+    <div id="content_box">
+        {{content}}
+    </div>
+
+    <div class="container">
+        <form action="{{ url_for('process_query') }}" method="POST">
+            <div class="input-container">
+                <input type="text" name="QUESTION" placeholder="Enter your query" id="ADIO">
+                <button class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 RAP GPT. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

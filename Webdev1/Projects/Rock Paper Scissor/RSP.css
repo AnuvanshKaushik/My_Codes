@@ -1,0 +1,82 @@
+h1{
+    background-color: black;
+    font-size: 50px;
+    text-align: center;
+}
+
+body{
+    margin: 20px 10px;
+    padding: 0px;
+    background-image: url('/Webdev1/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+    color: aliceblue;
+    height: 100vh;
+    width: 100vw;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+.btn{
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    background-color: #081b31;
+  }
+  
+  #button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+  }
+  
+  .Total_Score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+  }
+  #Ani,
+#Ani1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+#Ani2{
+    font-size: 3rem;
+    color: #fff;
+}
+#Ani2{
+    color:blueviolet;
+    text-decoration: none;
+    }
+    
+#Ani2:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+.Bg{
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column ;
+    flex-wrap: wrap;
+}
+

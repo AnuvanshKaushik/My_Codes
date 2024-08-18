@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+</head>
+
+<body>
+    <a href="/WEBSITE/HTML/HTML3.html"target="_blank">HTML3</a>    
+
+                                                    <h2>EMPLOYEE DETAILS</h2>
+    <form action="MAIN.php">
+    <label for="name">NAME</label>
+    <div><input type="text" name="name" id="name"></div><br>   
+
+    <label for="gender">Gender</label>
+    <div>Male<input type="radio" name="gender" id="gender"> Female<input type="radio" name="gender">Other<input type="radio" name="gender"></div><br>
+    
+    <label for="age">AGE</label>
+    <div><input type="number" name="age" id="age"></div><br>
+    
+    <label for="dateofbirth">DATE OF BIRTH</label>
+    <div><input type="date" name="dateofbirth" id="dateofbirth"></div><br>
+    
+    <label for="email">EMAIL ID</label>
+    <div><input type="email" name="email" id="email"></div><br>
+    
+    <label for="role">ROLE</label>
+    <div><input type="text" name="role" id="role"></div><br>
+    
+    <label for="suggestion">ANY SUGGESTION FOR THE COMPANY</label>
+    <div><br> <textarea name="suggestion" cols="100" rows="5" id="suggestion"></textarea></div>
+
+    <div><label for="mode">Which Mode you Prefer?</label>
+    <select name="mode" id="mode">
+        <option value="select" selected>select</option>
+        <option value="online" >Online</option>
+        <option value="offline" >Offline</option>
+        <option value="hybrid" >Hybrid</option>
+    </select></div>
+
+    <label for="confirm">Are you agree?</label>
+    <span><input type="checkbox" name="confirmation" id="confirm"></span><br><br>
+
+    <span><input type="submit" value="SUBMIT"></span>
+    <span><input type="reset" value="RESET"></span>
+
+</form>
+</body>
+</html>
