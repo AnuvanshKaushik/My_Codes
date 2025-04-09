@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-hospital"></i>
+                    <span>MediCare</span>
+                </div>
+                <div class="nav-links">
+                    <a href="home.html" class="nav-link active">Home</a>
+                    <a href="doctors.html" class="nav-link">Doctors</a>
+                    <a href="appointments.html" class="nav-link">Appointments</a>
+                    <a href="profile.html" class="nav-link">Profile</a>
+                </div>
+                <div class="user-actions">
+                    <span id="userName"></span>
+                    <button id="logoutBtn" class="btn">Logout</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Book Your Doctor's Appointment</h1>
+                <p>Find the best doctors and book appointments instantly</p>
+                <a href="doctors.html" class="btn btn-large">Find Doctors</a>
+            </section>
+
+            <section class="features">
+                <div class="feature-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Easy Booking</h3>
+                    <p>Book appointments with just a few clicks</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Expert Doctors</h3>
+                    <p>Access to qualified medical professionals</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock assistance for your needs</p>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <h2>What Our Patients Say</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The booking process was so smooth and the doctor was very professional. Highly recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="author-name">John Doe</span>
+                            <span class="author-role">Patient</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"I found the perfect specialist for my needs and got an appointment the same day. Amazing service!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="author-name">Jane Smith</span>
+                            <span class="author-role">Patient</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MediCare</h3>
+                    <p>Your health is our priority. Book appointments with the best doctors in town.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> support@medicare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Medical Street, Health City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - My Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <a href="home.html" class="logo">Medi<span>Care</span></a>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                </ul>
+                <div class="user-menu">
+                    <div class="user-actions">
+                        <span id="userName">John Doe</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <ul class="user-dropdown">
+                        <li><a href="profile.html"><i class="fas fa-user-circle"></i> My Profile</a></li>
+                        <li><a href="appointments.html"><i class="fas fa-calendar-check"></i> My Appointments</a></li>
+                        <li><button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-header">
+                <div class="container">
+                    <h1>My Profile</h1>
+                    <p>Manage your personal information and settings</p>
+                </div>
+            </section>
+
+            <section class="profile-section">
+                <div class="profile-container">
+                    <div class="profile-sidebar">
+                        <div class="profile-image">
+                            <img id="profileImage" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile Image">
+                            <button class="change-photo-btn">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <h3 id="profileName">John Doe</h3>
+                        <p id="profileEmail">johndoe@example.com</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="appointmentsCount">5</span>
+                                <span class="stat-label">Appointments</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="completedCount">3</span>
+                                <span class="stat-label">Completed</span>
+                            </div>
+                        </div>
+                        <ul class="profile-menu">
+                            <li class="active"><a href="#personal-info"><i class="fas fa-user"></i> Personal Information</a></li>
+                            <li><a href="#medical-history"><i class="fas fa-notes-medical"></i> Medical History</a></li>
+                            <li><a href="#account-settings"><i class="fas fa-cog"></i> Account Settings</a></li>
+                            <li><a href="#notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="profile-content">
+                        <div class="profile-section-content active" id="personal-info">
+                            <div class="section-header">
+                                <h2>Personal Information</h2>
+                                <button class="edit-section-btn" id="editPersonalInfoBtn">Edit</button>
+                            </div>
+                            
+                            <form id="personalInfoForm">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="fullName">Full Name</label>
+                                        <input type="text" id="fullName" class="form-control" value="John Doe" disabled>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="dateOfBirth">Date of Birth</label>
+                                        <input type="date" id="dateOfBirth" class="form-control" value="1990-05-15" disabled>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="gender">Gender</label>
+                                        <select id="gender" class="form-control" disabled>
+                                            <option value="male" selected>Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phoneNumber">Phone Number</label>
+                                        <input type="tel" id="phoneNumber" class="form-control" value="+1 (555) 123-4567" disabled>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" class="form-control" value="johndoe@example.com" disabled>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <input type="text" id="address" class="form-control" value="123 Main Street, Apt 4B" disabled>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" class="form-control" value="New York" disabled>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="zipCode">Zip Code</label>
+                                        <input type="text" id="zipCode" class="form-control" value="10001" disabled>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions" style="display: none;">
+                                    <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
+                                    <button type="submit" class="btn btn-primary" id="saveChanges">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="profile-section-content" id="medical-history">
+                            <div class="section-header">
+                                <h2>Medical History</h2>
+                                <button class="edit-section-btn" id="editMedicalHistoryBtn">Edit</button>
+                            </div>
+                            
+                            <div class="medical-history-section">
+                                <h3>Allergies</h3>
+                                <ul class="medical-list" id="allergiesList">
+                                    <li>Penicillin</li>
+                                    <li>Peanuts</li>
+                                </ul>
+                                <div class="add-item-form" style="display: none;">
+                                    <input type="text" class="form-control" placeholder="Add allergy">
+                                    <button class="btn btn-sm btn-primary">Add</button>
+                                </div>
+                            </div>
+                            
+                            <div class="medical-history-section">
+                                <h3>Chronic Conditions</h3>
+                                <ul class="medical-list" id="conditionsList">
+                                    <li>Asthma</li>
+                                    <li>High Blood Pressure</li>
+                                </ul>
+                                <div class="add-item-form" style="display: none;">
+                                    <input type="text" class="form-control" placeholder="Add condition">
+                                    <button class="btn btn-sm btn-primary">Add</button>
+                                </div>
+                            </div>
+                            
+                            <div class="medical-history-section">
+                                <h3>Medications</h3>
+                                <ul class="medical-list" id="medicationsList">
+                                    <li>Lisinopril 10mg (Daily)</li>
+                                    <li>Albuterol Inhaler (As needed)</li>
+                                </ul>
+                                <div class="add-item-form" style="display: none;">
+                                    <input type="text" class="form-control" placeholder="Add medication">
+                                    <button class="btn btn-sm btn-primary">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section-content" id="account-settings">
+                            <div class="section-header">
+                                <h2>Account Settings</h2>
+                            </div>
+                            
+                            <div class="settings-section">
+                                <h3>Email Preferences</h3>
+                                <div class="checkbox-group">
+                                    <label>
+                                        <input type="checkbox" checked> Appointment reminders
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" checked> Appointment confirmations
+                                    </label>
+                                    <label>
+                                        <input type="checkbox"> Newsletter and updates
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" checked> Doctor recommendations
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-section">
+                                <h3>Change Password</h3>
+                                <form id="changePasswordForm">
+                                    <div class="form-group">
+                                        <label for="currentPassword">Current Password</label>
+                                        <div class="input-group">
+                                            <input type="password" id="currentPassword" class="form-control">
+                                            <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="newPassword">New Password</label>
+                                        <div class="input-group">
+                                            <input type="password" id="newPassword" class="form-control">
+                                            <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirm New Password</label>
+                                        <div class="input-group">
+                                            <input type="password" id="confirmPassword" class="form-control">
+                                            <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Update Password</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-section">
+                                <h3>Account Actions</h3>
+                                <button class="btn btn-danger" id="deleteAccountBtn">Delete Account</button>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section-content" id="notifications">
+                            <div class="section-header">
+                                <h2>Notifications</h2>
+                            </div>
+                            
+                            <div class="notifications-list" id="notificationsList">
+                                <div class="notification-item unread">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <p class="notification-text">Your appointment with Dr. Sarah Johnson has been confirmed for tomorrow at 10:00 AM.</p>
+                                        <span class="notification-time">1 hour ago</span>
+                                    </div>
+                                    <div class="notification-actions">
+                                        <button class="mark-read-btn"><i class="fas fa-check"></i></button>
+                                        <button class="delete-notification-btn"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-item">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <p class="notification-text">Remember to take your medication at 8:00 PM today.</p>
+                                        <span class="notification-time">5 hours ago</span>
+                                    </div>
+                                    <div class="notification-actions">
+                                        <button class="delete-notification-btn"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-item">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <p class="notification-text">Dr. Michael Chen is now available for appointments on Saturdays.</p>
+                                        <span class="notification-time">Yesterday</span>
+                                    </div>
+                                    <div class="notification-actions">
+                                        <button class="delete-notification-btn"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="notification-settings">
+                                <h3>Notification Settings</h3>
+                                <div class="checkbox-group">
+                                    <label>
+                                        <input type="checkbox" checked> Push notifications
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" checked> SMS notifications
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" checked> Email notifications
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-col">
+                        <h3>MediCare</h3>
+                        <p>Making healthcare accessible and convenient for everyone. Book appointments with the best doctors in town.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="doctors.html">Find Doctors</a></li>
+                            <li><a href="appointments.html">Appointments</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Healthcare Ave, Medical City</li>
+                            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> support@medicare.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 MediCare. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Toggle profile sections
+        document.querySelectorAll('.profile-menu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                
+                // Update active menu item
+                document.querySelectorAll('.profile-menu li').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.parentElement.classList.add('active');
+                
+                // Show target section
+                document.querySelectorAll('.profile-section-content').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+        
+        // Edit personal information
+        document.getElementById('editPersonalInfoBtn').addEventListener('click', function() {
+            const formInputs = document.querySelectorAll('#personalInfoForm .form-control');
+            const formActions = document.querySelector('#personalInfoForm .form-actions');
+            
+            formInputs.forEach(input => {
+                input.disabled = false;
+            });
+            
+            formActions.style.display = 'flex';
+            this.style.display = 'none';
+        });
+        
+        // Cancel edit
+        document.getElementById('cancelEdit').addEventListener('click', function() {
+            const formInputs = document.querySelectorAll('#personalInfoForm .form-control');
+            const formActions = document.querySelector('#personalInfoForm .form-actions');
+            const editBtn = document.getElementById('editPersonalInfoBtn');
+            
+            formInputs.forEach(input => {
+                input.disabled = true;
+            });
+            
+            formActions.style.display = 'none';
+            editBtn.style.display = 'block';
+        });
+        
+        // Edit medical history
+        document.getElementById('editMedicalHistoryBtn').addEventListener('click', function() {
+            const addItemForms = document.querySelectorAll('.add-item-form');
+            
+            addItemForms.forEach(form => {
+                form.style.display = form.style.display === 'none' ? 'flex' : 'none';
+            });
+        });
+        
+        // Toggle password visibility
+        document.querySelectorAll('.toggle-password').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const input = this.previousElementSibling;
+                const icon = this.querySelector('i');
+                
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
